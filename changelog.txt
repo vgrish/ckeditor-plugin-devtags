@@ -1,0 +1,5 @@
+Changelog for ckeditor-plugin-devtags
+
+1.0.0-beta (03.11.2016)
+==============
+- Initial
