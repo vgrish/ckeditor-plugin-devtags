@@ -57,7 +57,7 @@
 					oldData = this.oldData;
 
 				if (newData.code)
-					this.parts.code.setHtml(CKEDITOR.tools.htmlEncode(newData.code));
+					this.parts.code.setHtml(CKEDITOR.tools.htmlDecode(newData.code));
 
 				// Save oldData.
 				this.oldData = CKEDITOR.tools.copy(newData);
@@ -93,7 +93,7 @@
 				code.children.length = 0;
 
 				// Set raw text inside <devtags>...</devtags>.
-				code.add(new CKEDITOR.htmlParser.text(CKEDITOR.tools.htmlEncode(this.data.code)));
+				code.add(new CKEDITOR.htmlParser.text(CKEDITOR.tools.htmlDecode(this.data.code)));
 
 				return el;
 			}
