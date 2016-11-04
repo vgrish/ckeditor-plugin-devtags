@@ -1,6 +1,5 @@
-
 /*
-from https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/codesnippet/plugin.js
+ from https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/codesnippet/plugin.js
  */
 
 'use strict';
@@ -22,6 +21,8 @@ from https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/codesnippet/pl
 		},
 
 		init: function (editor) {
+			editor.addContentsCss(CKEDITOR.plugins.getPath('devtags') + 'css/devtags.css');
+
 			editor.ui.addButton && editor.ui.addButton('DevTags', {
 				label: editor.lang.devtags.toolbar,
 				command: 'devTags',
